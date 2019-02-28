@@ -1,0 +1,212 @@
+@charset "utf-8";
+
+@font-face{
+/*	font-family:"사용자 폰트이름"; 
+	src:url(woff파일이 있는 주소); */
+	font-family:"noto";
+	src:url(fonts/NotoSansKR-Medium.woff);
+}
+html,body{
+	margin:0;
+	font-family:"noto";
+	background-color:#eeeeee;
+	
+}
+a{color:#333333;
+	text-decoration:none;
+	/* 밑줄 제거 */
+}
+a:hover{
+	color:darkred;
+}
+img{
+	border:0;
+	vertical-align:bottom;
+	/* 이미지의 정렬 기준은 top인 것을 텍스트의 기준인 bottom으로 변경 */
+}
+table,th,td{
+	/* 표작성시에 필요한 기본 디자인 */
+	border:1px solid black;
+	border-collapse:collapse;
+	/* 테두리는 셀과 셀끼리 부딪쳐서 두개로 보이는 경우에 하나의 테두리로 처리하는 방법 */
+}
+*{/* '*'는 와일드 선택자- 모든 선택자  */
+	padding:0;
+	margin:0;
+/*	position:relative; */
+	box-sizing:border-box;
+}
+[class*="col-"]{
+	float:left;
+	padding:15px; /* 상황에 따라서 추가 변형할 수 있다. */
+	border:1px solid black; /* 상황에 따라서 추가 변형할 수 있다. */
+}
+.row::after{
+	content:""; /* 필수 */
+	clear:both; /* 필수 */
+	display:table; /* 상황에 따라서 변형할 수 있다. inline,inlin-block은 사용하지 맙시다 ; */
+}
+.col-lg-1 {width: 8.33%;}
+.col-lg-2 {width: 16.66%;}
+.col-lg-3 {width: 25%;}
+.col-lg-4 {width: 33.33%;}
+.col-lg-5 {width: 41.66%;}
+.col-lg-6 {width: 50%;}
+.col-lg-7 {width: 58.33%;}
+.col-lg-8 {width: 66.66%;}
+.col-lg-9 {width: 75%;}
+.col-lg-10 {width: 83.33%;}
+.col-lg-11 {width: 91.66%;}
+.col-lg-12 {width: 100%;}
+.container{
+	width:100%;
+	/* 너비는 %는 상대적인 크기를 의미하지만 부모의 크기에 비례해서 정해진다. */
+	/* wrap 또는 container로 감싸는 이유는 자손들의 크기를 부모의 크기에 맞추어서 일괄적으로 정리하기 위한 것 */
+	
+}
+.header{
+	width:100%;
+	background-color:white;
+	float:none;
+	height:auto;
+}
+.logo-login{
+	width:100%;
+/*	min-width:1200px; */
+	max-width:1900px;
+	margin:auto;
+	border:none;
+	position:relative;
+	
+}
+.logo{
+	width:100px; /* logo는 반응에 민감할 필요가 없어서 고정 단위*/
+	height:100px;
+	background:none;
+	float:none; /*내용을 왼쪽 또는 오른쪽에 배치, 기준되는 요소에 float이 있어야 한다. */
+	margin:auto;/* 요소를 가운데에 배치할 때는 margin:auto를 사용할 수 있느데, float:none인 상태에서 처리가 되어야 한다. */ 
+	
+}
+.logo>img{
+	width:100%;
+}
+.login{
+	float:right;
+	position:absolute;
+	right:20px;
+	top:20px;
+
+}
+.nav{
+	width:100%;
+	background:#2A0A12;
+	float:left;
+	clear:both;
+	position:relative;
+}
+.main-nav{
+	width:100%;
+/*	min-width:1200px; */
+	max-width:1900px;
+	margin:auto;
+	border:none;
+}
+.main-nav>ul{
+	list-style:none;
+	text-align:center;
+}
+.main-nav>ul>li{
+	display:inline-block;/*inline-block은 글자처럼 취급, 블록형의 박스로 취급 */
+	width:15%;
+	margin:0 20px;
+	position:relative;
+	
+}
+.main-nav>ul>li>a{
+	width:100%;
+	padding:10px;
+	background:black;
+	color:white;
+	display:block;
+	box-sizing:border-box;
+	
+}
+.main-nav>ul>li>a:hover{
+	background:darkred;
+}
+.section-wrap{
+	width:100%;
+/*	min-width:1200px; */
+	max-width:1900px;
+	background-color:white;
+	margin:auto;
+	clear:both;
+}
+.footer{
+	width:100%;
+	background-color:#222222;
+	color:white;
+	clear:both; /*float을 위의 요소가 적용되고 있을 때 새로운 위치로 다시 시작해야 하는 경우   */
+}
+.footer-content{
+/*	min-width:1200px; */
+	max-width:1900px;
+	border:1px solid red;
+	margin:auto;
+}
+
+.drop-wrap{
+	width:100%;
+	background:white;
+	position:absolute;
+	left:0; 
+	display:none;
+}
+.drop-down{
+	list-style:none;
+	padding:0; margin:0;
+	width:100%;
+/*	min-width:1200px; */
+	max-width:1900px;
+	margin:auto;
+	background:white;
+	text-align:center;
+}
+.drop-down>li{
+	display:inline-block;
+	width:15%;
+	margin:0 20px;
+}
+.drop-list{
+	list-style:none;
+	padding:0; margin:0;
+	width:100%;
+	background:orange;
+}
+.drop-list>li{
+	
+}
+.drop-list>li>a{
+	padding:10px;
+	background:transparent;
+	box-sizing:border-box;
+	display:block;
+	text-align:left;
+}
+.drop-list>li>a:hover{
+	background:purple;
+	color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

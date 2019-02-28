@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>난다 난다</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<!-- link로 연결된 웹폰트는 html에 안에 작성
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+-->
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/m2.css">
+<script >
+var myAgent=navigator.userAgent.toLowerCase();
+//기기의 환경(navigator.userAgent)의 값을 myAgent에 저장
+//toLowerCase는 모든 문자열을 소문자로 변경 
+var mobile=["iphone","ipod","android","blackberry","window ce","nokia","webos","opera mine","sonyericsson","opera mobi","iemobile"];
+// mobile 변수의 공간에 환경의 값과 비교할 값을 저장
+//[], 배열공간
+for(var i=0; i<mobile.length;i++){
+//반복( 초기값=0; 최종값(mobile의 개수만큼); 증가값(1씩 증가) )
+    if(myAgent.indexOf(mobile[i])>=0){
+//indexOf(mobile[i])은 배열공간의 위치값을 가지고 찾는다.
+    location.href="m.main.html";
+//모바일에 접속되었다면 접속할 페이지 주소
+    break;
+    }
+}
+</script>
+<script src="js/jquery.js" ></script>
+<script src="js/common.js" ></script>
+</head>
+<body>
+<div class="container">
+	<header class="header">
+		<div class="logo-login">
+			<h1 class="logo">
+				<a href="main.html"><img src="images/logo.png" alt="logo"></a>
+			</h1>
+			<div class="login">로그인</div>
+		</div>
+		<nav class="nav">
+			<div class="main-nav">
+				<ul>
+					<li><a href="#">menu1</a>
+						
+					</li>
+					<li><a href="#">menu2</a>
+						
+					</li>
+					<li><a href="#">menu3</a>
+						
+					</li>
+					<li><a href="#">menu4</a>
+						
+					</li>
+					<li><a href="#">menu5</a>
+						
+					</li>
+				
+				</ul>
+			</div>
+			<div class="drop-wrap">
+                <ul class="drop-down">
+                    <li>
+                        <ul class="drop-list">
+                            <li><a href="m1.html">menu1-1</a></li>
+                            <li><a href="m2.html">menu1-2</a></li>
+                            <li><a href="m3.html">menu1-3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="drop-list">
+                            <li><a href="#">menu2-1</a></li>
+                            <li><a href="#">menu2-2</a></li>
+                            <li><a href="#">menu2-3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="drop-list">
+                            <li><a href="#">menu3-1</a></li>
+                            <li><a href="#">menu3-2</a></li>
+                            <li><a href="#">menu3-3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="drop-list">
+                            <li><a href="#">menu4-1</a></li>
+                            <li><a href="#">menu4-2</a></li>
+                            <li><a href="#">menu4-3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="drop-list">
+                            <li><a href="#">menu5-1</a></li>
+                            <li><a href="#">menu5-2</a></li>
+                            <li><a href="#">menu5-3</a></li>
+                        </ul>
+                    </li>
+                
+                </ul>
+            </div>
+		</nav>
+	</header>
+	<div class="section-wrap">
+		페이지2
+	</div>
+	<footer class="footer">
+		<div class="footer-content">푸터</div>
+	</footer>
+
+</div>
+
+
+</body>
+</html>
